@@ -1,0 +1,85 @@
+/*----------------------------------------
+Foglio di stile: incredible_post_slider
+----------------------------------------*/
+:root {
+    --slider-height-desktop: 600px;
+    --slider-height-mobile: 400px;
+}
+
+/*Container*/
+.incredible_post_slider_container { position: relative; }
+
+/*Slide*/
+.incredible_post_slider_container .incredible_post_slider.owl-carousel .owl-item .item {
+    background-size: cover !important;
+    background-position: center center !important;
+    display: flex;
+    height: var(--slider-height-desktop);
+}
+
+/*Link in slide*/
+.incredible_post_slider_container .incredible_post_slider.owl-carousel .owl-item .item a {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: end;
+    padding: 24px;
+    background: linear-gradient(0deg, black, transparent 50%);
+    text-decoration: none;
+}
+
+/*Titolo*/
+.incredible_post_slider_container .incredible_post_slider.owl-carousel .owl-item .item a h2 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+    max-width: 480px;
+    text-align: center;
+}
+
+/*Controlli*/
+.incredible_post_slider_container .customPrevBtn,
+.incredible_post_slider_container .customNextBtn {
+    position: absolute;
+    top: calc(50% - 15px);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.4);
+    padding: 0;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+}
+
+/*Svg in controlli*/
+.incredible_post_slider_container .customPrevBtn svg,
+.incredible_post_slider_container .customNextBtn svg {
+    max-width: 20px;
+}
+
+/*Controllo (sinistra)*/
+.incredible_post_slider_container .customPrevBtn {
+    left: 12px;
+}
+
+/*Controllo (destra)*/
+.incredible_post_slider_container .customNextBtn {
+    right: 12px;
+}
+
+/*Media Query*/
+@media only screen and (max-width: 768px) {
+    /*Slide*/
+    .incredible_post_slider_container .incredible_post_slider.owl-carousel .owl-item .item {
+        height: var(--slider-height-mobile);
+    }
+
+    /*Titolo*/
+    .incredible_post_slider_container .incredible_post_slider.owl-carousel .owl-item .item a h2 {
+        font-size: 18px;
+    }
+}
